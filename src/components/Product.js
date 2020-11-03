@@ -1,11 +1,11 @@
 import React from 'react'
-import { useStateValue } from '../StateProvider'
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import './Product.css'
 
 function Product({ id, title, image, price, rating }) {
 
-    const [{basket}, dispatch] = useStateValue();
-// console.log("This is basket >>>>>>", basket);
+    const dispatch = useDispatch();
 
     const addToBasket = () => {
         //dispatch the item to store

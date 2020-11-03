@@ -1,9 +1,10 @@
 import React from 'react'
-import { useStateValue } from '../StateProvider';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import './CheckoutProduct.css'
 
 function CheckoutProduct({ id, price, image, title, rating, hideButton }) {
-    const [{basket}, dispatch] = useStateValue();
+    const dispatch = useDispatch();
 
     const removeFromBasket = () => {
         dispatch({

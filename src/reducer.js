@@ -1,4 +1,4 @@
-export const initialState = {
+const initialState = {
     basket: [],
     user: null,
     city: null,
@@ -12,15 +12,13 @@ export const initialState = {
 export const getBasketTotal = (basket) => 
     basket?.reduce((amount, item) => item.price + amount, 0);
 
-const reducer = (state, action) => {
+const reducer = (state = initialState, action) => {
 console.log(action);
     switch(action.type) {
         case 'ADD_TO_BASKET':
             return {
                 ...state,
                 basket: [...state.basket, action.item],
-                // subtotal: state.subtotal + action.item.price,
-                //lets use another way to it, by using fn getBasketTotal.
             };
         case 'REMOVE_FROM_BASKET':
             const index = state.basket.findIndex(

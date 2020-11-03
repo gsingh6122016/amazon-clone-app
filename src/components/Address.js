@@ -2,15 +2,16 @@ import React, { useState } from 'react'
 import CurrencyFormat from 'react-currency-format';
 import { Link, useHistory } from 'react-router-dom';
 import { getBasketTotal } from '../reducer';
-import { useStateValue } from '../StateProvider';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import useForm from '../useForm';
 import validate from '../AddressValidation';
 import './Address.css'
 
 function Address() {
     const history = useHistory();
-    const [{basket}, dispatch] = useStateValue();
-  
+    const state = useSelector(state => state);
+    const dispatch = useDispatch();
         const {
           values,
           handleChange,
@@ -83,7 +84,7 @@ function Address() {
           <h3>Order Total: {value}</h3>
         )}
         decimalScale={2}
-        value={getBasketTotal(basket)} 
+        value={getBasketTotal(state.basket)} 
         displayType={"text"}
         thousandSeparator={true}
         prefix={"Rs. "}

@@ -6,15 +6,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Checkout from './components/Checkout';
 import Login from './components/Login';
 import { auth } from './firebase';
-import { useStateValue } from './StateProvider';
 import Payment from './components/Payment';
 import Orders from './components/Orders';
 import Address from './components/Address';
 import Register from './components/Register';
+import { useDispatch } from "react-redux";
 
 function App() {
 
-  const [{basket}, dispatch] = useStateValue();
+  const dispatch = useDispatch();
 
 useEffect(() => {
 //componenet did mount

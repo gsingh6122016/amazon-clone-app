@@ -1,18 +1,14 @@
 import { auth } from '../firebase';
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { useStateValue } from '../StateProvider';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import useForm from '../useForm';
 import validate from '../RegisterValiadtion';
 
 function Register() {
     const history = useHistory();
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    // const [name, setName] = useState('');
-    // const [phoneno, setPhoneno] = useState('');
-
-    const [{}, dispatch] = useStateValue();
+    const dispatch = useDispatch();
 
     const {
         values,

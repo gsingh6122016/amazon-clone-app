@@ -2,13 +2,22 @@ import React from 'react'
 import CurrencyFormat from 'react-currency-format';
 import { Link, useHistory } from 'react-router-dom';
 import { getBasketTotal } from '../reducer';
-import { useStateValue } from '../StateProvider';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import CheckoutProduct from './CheckoutProduct';
 import './Payment.css';
 import {db} from '../firebase';
 
 function Payment() {
-    const [{basket, user, city, landmark, pincode, name, phoneno}, dispatch] = useStateValue();
+
+    const basket = useSelector(state => state.basket);
+    const user = useSelector(state => state.user);
+    const city = useSelector(state => state.city);
+    const landmark = useSelector(state => state.landmark);
+    const pincode = useSelector(state => state.pincode);
+    const name = useSelector(state => state.name);
+    const phoneno = useSelector(state => state.phoneno);
+    const dispatch = useDispatch();
     const history = useHistory();
     
 const handleSubmit = (event) => {
