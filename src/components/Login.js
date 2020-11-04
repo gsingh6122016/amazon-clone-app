@@ -60,7 +60,7 @@ function Login() {
             <button
             type='submit'
             onClick={register}
-            className='login__registerButton'>Register</button>
+            className='login__registerButton'>Create New Account</button>
             </div>
         </div>
     )
