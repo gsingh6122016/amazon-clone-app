@@ -9,7 +9,7 @@
 
 .address__container {
     position: fixed;
-    top: 100px;
+    top: 150px;
     width: 550px;
     margin-bottom: 20px;
     height: fit-content;
@@ -22,7 +22,12 @@
 
 .address__price{
     position: fixed;
-    bottom: 50px;
+    background: #f0c14b;
+    border-radius: 2px;
+    border: 1px solid;
+    padding: 5px;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
 }
 .address__container > h1 {
     font-weight: 500;
@@ -61,8 +66,8 @@
 
   @media(max-width: 600px) {
     .address__container {
+      top: 220px;
         width: 300px;
-        top: 170px;
     }
   }
   

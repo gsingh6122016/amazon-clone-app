@@ -1,15 +1,15 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB2lP4eyqC2y0vSQf6UaQMdH82J5zOug0I",
-    authDomain: "clone-a6f75.firebaseapp.com",
-    databaseURL: "https://clone-a6f75.firebaseio.com",
-    projectId: "clone-a6f75",
-    storageBucket: "clone-a6f75.appspot.com",
-    messagingSenderId: "521642046882",
-    appId: "1:521642046882:web:93f17641ae9f6094e4eefb",
-    measurementId: "G-CKBD3WYGL5"
-  };
+  apiKey: "AIzaSyBx4PeIMM499etvqAKXCxYLEISJ-EAoAro",
+  authDomain: "online-shopping-5678a.firebaseapp.com",
+  databaseURL: "https://online-shopping-5678a.firebaseio.com",
+  projectId: "online-shopping-5678a",
+  storageBucket: "online-shopping-5678a.appspot.com",
+  messagingSenderId: "600036219638",
+  appId: "1:600036219638:web:5fa554c4d444166eaaaad7",
+  measurementId: "G-TRTMNSQ898"
+};
 
   const firebaseApp = firebase.initializeApp(firebaseConfig);
 
