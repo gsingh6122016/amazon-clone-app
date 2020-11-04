@@ -25,11 +25,8 @@ function Register() {
             // it success creates a new user account with email and password
             // console.log(auth);
             if(auth){
-                dispatch({
-                    type: 'SET_DETAILS',
-                    name: values.name,
-                    phoneno: values.phoneno
-                    });
+                localStorage.setItem("name", values.name);
+                localStorage.setItem("phoneno", values.phoneno);
                 history.push('/');
             }
         })
@@ -37,12 +34,6 @@ function Register() {
        
       }
 
-    // const register = e => {
-    //     e.preventDefault();
-        
-        
-
-    // }
 
     return (
         <div className="login">

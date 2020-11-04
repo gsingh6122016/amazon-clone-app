@@ -11,17 +11,13 @@ function Header() {
 
   const basket = useSelector(state => state.basket);
   const user = useSelector(state => state.user);
+  const name = useSelector(state => state.name);
   const dispatch = useDispatch();
 
 
   const handleAuthentication = () => {
     if (user) {
       auth.signOut();
-      dispatch({
-        type: 'REMOVE_USER',
-        name: null,
-        phoneno: null,
-      });
     }
   }
 
@@ -45,7 +41,7 @@ function Header() {
         <div
         onClick={handleAuthentication}
         className="header__option">
-          <span className="header__optionLineOne">Hello! {user?user.email:null}</span>
+          <span className="header__optionLineOne">Hello! { name? (name) :( user?.email)}</span>
           <span className="header__optionLineTwo">{user ? 
           'Sign Out':'Sign In'}</span>
         </div>

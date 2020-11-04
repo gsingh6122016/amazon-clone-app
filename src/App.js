@@ -22,16 +22,27 @@ auth.onAuthStateChanged(authUser => {
   console.log('USER IS  >>>', authUser);
   if(authUser) {
     //the user just logged in or the userr was logged in.
+    const name = localStorage.getItem('name');
+    const phoneno = localStorage.getItem('phoneno');
+
     dispatch({
       type: 'SET_USER',
+      name: name,
+      phoneno: phoneno,
       user: authUser
-    })
+    });
+
+
   }
   else {
     //the user logged out
+    localStorage.removeItem('name');
+    localStorage.removeItem('phoneno');
     dispatch({
       type: 'SET_USER',
-      user: null
+      user: null,
+      name: null,
+      phoneno: null
     })
   }
 })

@@ -41,6 +41,7 @@ const handleSubmit = (event) => {
  
 }
 
+const phno = (<p>Phone Number: {phoneno}</p>);
     return (
         <div className='payment'>
             <div className='payment__container'>
@@ -58,7 +59,8 @@ const handleSubmit = (event) => {
                         </div>
                         <div className='payment__address'>
                             <p>Name: {name? (name) :( user?.email)}</p>
-                            <p>Phone Number: {phoneno}</p>
+                            {/* <p>Phone Number: {phoneno}</p> */}
+                            {phoneno? phno:null}
                             <p>Landmark: {landmark}</p>
                             <p>Pincode: {pincode}</p>
                             <p>City: {city}</p>

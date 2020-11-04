@@ -43,7 +43,9 @@ console.log(action);
         case 'SET_USER':
           return {
             ...state,
-            user: action.user
+            user: action.user,
+            name: action.name,
+            phoneno: action.phoneno,
           }
 
         case 'SET_ADDRESS':
@@ -54,12 +56,6 @@ console.log(action);
             pincode: action.pincode
           }
           
-          case 'SET_DETAILS':
-          return {
-            ...state,
-            name: action.name,
-          phoneno: action.phoneno,
-          }
             
         case 'EMPTY_BASKET':
           return {
@@ -67,13 +63,7 @@ console.log(action);
             basket: [] 
 
           }
-        
-          case 'REMOVE_USER':
-            return {
-              ...state,
-              name: action.name,
-              phoneno: action.phoneno,
-            }
+     
 
         default:
             return state;
